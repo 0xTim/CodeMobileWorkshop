@@ -42,6 +42,8 @@ public func configure(
     /// Configure migrations
     var migrations = MigrationConfig()
     migrations.add(model: Todo.self, database: .sqlite)
+    migrations.add(model: User.self, database: .sqlite)
+    migrations.add(model: Reminder.self, database: .sqlite)
     services.register(migrations)
 
 }
